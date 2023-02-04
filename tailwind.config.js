@@ -3,7 +3,11 @@
 module.exports = {
   content: ['./app/**/*.hbs'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        default: "url('img/background.webp')",
+      },
+    },
   },
   plugins: [],
 };
