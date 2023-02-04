@@ -6,6 +6,13 @@ module.exports = {
     extend: {
       backgroundImage: {
         default: "url('img/background.webp')",
+        divider: "url('img/divider.webp')",
+      },
+      fontFamily: {
+        default: 'Raleway',
+      },
+      colors: {
+        'kst-blue': '#AAD6E6',
       },
     },
   },
