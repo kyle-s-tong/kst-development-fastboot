@@ -22,7 +22,7 @@ export default class AboutSectionServicesGridComponent extends Component {
     },
     {
       title: 'Testing and Quality Assurance',
-      imagePath: '/ffdsaf/testing-and-qa',
+      imagePath: 'assets/img/testing-and-qa.webp',
       description:
         'Thorough test planning and execution to make sure you receive solutions of utmost quality.',
     },
