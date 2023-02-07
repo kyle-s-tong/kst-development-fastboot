@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>KST Development | Web solutions from South Korea</title>
+    <meta
+      name="description"
+      content="KST Development provides high-quality web development for Australia and New Zealand companies at competitive rates."
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>KST Development | Web solutions from South Korea</title>
-  <meta name="description"
-    content="KST Development provides high-quality web development for Australia and New Zealand companies at competitive rates." />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2NG8G4M3BL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NG8G4M3BL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      gtag('config', 'G-2NG8G4M3BL');
+    </script>
 
-    gtag('config', 'G-2NG8G4M3BL');
-  </script>
+    {{content-for "head"}}
 
-  {{content-for "head"}}
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css" />
+    <link
+      integrity=""
+      rel="stylesheet"
+      href="{{rootURL}}assets/kst-development-fastboot.css"
+    />
 
-  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css" />
-  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/kst-development-fastboot.css" />
+    {{content-for "head-footer"}}
+  </head>
 
-  {{content-for "head-footer"}}
-</head>
+  <body>
+    {{content-for "body"}}
 
-<body>
-  {{content-for "body"}}
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/kst-development-fastboot.js"></script>
 
-  <script src="{{rootURL}}assets/vendor.js"></script>
-  <script src="{{rootURL}}assets/kst-development-fastboot.js"></script>
-
-  {{content-for "body-footer"}}
-</body>
-
+    {{content-for "body-footer"}}
+  </body>
 </html>

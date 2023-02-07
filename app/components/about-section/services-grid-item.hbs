@@ -1,14 +1,20 @@
 <div class='py-8 grid grid-cols-8'>
   <div class='flex col-span-1 px-2 h-full w-full'>
-    <figure class='flex items-center justify-center bg-kst-blue border rounded-full h-16 w-16'>
-      <img src={{@service.imagePath}} alt='Small icon representing {{@service.title}}' class='p-4' />
+    <figure
+      class='flex items-center justify-center bg-kst-blue border rounded-full h-16 w-16'
+    >
+      <img
+        src={{@service.imagePath}}
+        alt='Small icon representing {{@service.title}}'
+        class='p-4'
+      />
     </figure>
   </div>
   <div class='pl-2 col-span-7'>
-    <div class="pb-4 text-xl tracking-wide">
+    <div class='pb-4 text-xl tracking-wide'>
       {{@service.title}}
     </div>
-    <div class="text-md text-slate-400">
+    <div class='text-md text-slate-400'>
       {{@service.description}}
     </div>
   </div>
