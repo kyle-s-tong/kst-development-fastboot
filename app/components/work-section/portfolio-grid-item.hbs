@@ -1,4 +1,10 @@
 <div class='h-full'>
-  <div>{{@item.title}}</div>
+  <div class='flex hover:bg-kst-blue'>
+    <img
+      src='{{@item.mainImagePath}}'
+      class='w-full h-full'
+      alt='Image showing page from the project done for {{@item.title}}'
+    />
+  </div>
   <div>{{@item.description}}</div>
 </div>

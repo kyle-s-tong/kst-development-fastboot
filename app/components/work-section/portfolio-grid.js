@@ -5,7 +5,7 @@ export default class WorkSectionPortfolioGridComponent extends Component {
     {
       title: 'Realestate.co.nz',
       subtitle: 'Full-stack development',
-      mainImagePath: '',
+      mainImagePath: 'assets/img/portfolio/thumb/p1.webp',
       // TODO: Make secondary images an array for more details.
       secondaryImagePath: '',
       description: `We implemented the front-end real estate listing displayed here
@@ -15,7 +15,7 @@ export default class WorkSectionPortfolioGridComponent extends Component {
     {
       title: 'Entrance Design',
       subtitle: 'Full-stack development',
-      mainImagePath: '',
+      mainImagePath: 'assets/img/portfolio/thumb/p2.webp',
       secondaryImagePath: '',
       description: `We took a design from the client, implemented it, and then lifted and shifted infrastructure into AWS. We also
                     moved their website over to a single- page application for faster performance and modern security.
@@ -24,7 +24,7 @@ export default class WorkSectionPortfolioGridComponent extends Component {
     {
       title: 'Realestate.co.nz',
       subtitle: 'Backend Development',
-      mainImagePath: '',
+      mainImagePath: 'assets/img/portfolio/thumb/p3.webp',
       secondaryImagePath: '',
       description: `We took data from a legacy platform and manipulated it to allow a customer service team to
                     input location data and define new areas based on points on a Google Maps instance.We then convert this to a
