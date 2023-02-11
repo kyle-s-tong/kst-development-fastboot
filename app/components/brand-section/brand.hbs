@@ -1,1 +1,15 @@
-{{yield}}
+<section
+  id='brand-section'
+  class='bg-kst-blue flex flex-row justify-center items-center'
+>
+  <div class='w-1/2 flex flex-row justify-center items-center py-12'>
+    {{#each this.brandData as |brand|}}
+      <a href='{{brand.brandUrl}}' class='w-3/12 px-6'>
+        <img
+          src='{{brand.brandImagePath}}'
+          alt='Logo for {{brand.brandName}}'
+        />
+      </a>
+    {{/each}}
+  </div>
+</section>
