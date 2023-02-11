@@ -1,24 +1,26 @@
 import Component from '@glimmer/component';
 
 export default class ContactSectionAddressBoxComponent extends Component {
-  addressBoxData = {
-    addressLine1: {
-      value: 'Room 206, 230 Simin-daero, Dongan-gu',
+  addressBoxData = [
+    {
+      name: 'address1',
+      value: `Room 206, 230 Simin-daero, Dongan-gu <br>Anyang-si, Gyeonggi-do <br>South Korea`,
       iconPath: 'assets/svg/house.svg',
     },
-    addressLine2: { value: 'Anyang-si, Gyeonggi-do' },
-    addressLine3: { value: 'South Korea' },
-    phoneNumber: {
+    {
+      name: 'phone',
       value: '(+82) 010-7170-7441',
       iconPath: 'assets/svg/phone.svg',
     },
-    email: {
+    {
+      name: 'email',
       value: 'info@kstdevelopment.com',
       iconPath: 'assets/svg/envelope.svg',
     },
-    website: {
+    {
+      name: 'website',
       value: 'www.kstdevelopment.com',
       iconPath: 'assets/svg/globe.svg',
     },
-  };
+  ];
 }

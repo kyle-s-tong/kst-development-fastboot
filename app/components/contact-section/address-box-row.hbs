@@ -1,1 +1,13 @@
-{{yield}}
+<div class='flex flex-row text-white text-xs py-2'>
+  {{#if @item.iconPath}}
+    <img
+      class='w-4 h-4 mt-1'
+      src={{@item.iconPath}}
+      alt='small icon representing {{@item.name}}'
+    />
+  {{/if}}
+  <div
+    class='{{if @item.iconPath "pl-2" "pl-6"}}
+      self-center tracking-wider leading-6'
+  >{{{@item.value}}}</div>
+</div>
