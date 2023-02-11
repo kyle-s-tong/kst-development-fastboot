@@ -1,5 +1,5 @@
 import Component from '@glimmer/component';
 
-// TODO: implement logic
+//TODO: implement logic
 // eslint-disable-next-line ember/no-empty-glimmer-component-classes
-export default class WorkSectionWorkComponent extends Component {}
+export default class ContactSectionContactFormComponent extends Component {}
