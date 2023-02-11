@@ -1,8 +1,47 @@
 <div class='col-span-3 bg-white/30 mx-10'>
-  <div class='py-4 px-8'>
+  <div class='flex flex-col py-4 px-8 h-full'>
     <h3 class='text-kst-blue text-xl tracking-wider pb-2'>Get in touch</h3>
-    {{!-- {{#each this.addressBoxData as |boxItem|}}
-    <ContactSection::AddressBoxRow @item={{boxItem}} />
-    {{/each}} --}}
+    <div class='flex flex-col h-full w-full'>
+      <form class='flex flex-col py-2 h-full'>
+        <div class='flex flex-row w-full'>
+          <div class='flex flex-col h-full w-1/2 text-sm'>
+            <Input
+              class='bg-black/40 m-2 p-2'
+              id='name'
+              @value='{{this.formData.name}}'
+              placeholder='Name:'
+              required
+            />
+            <Input
+              class='bg-black/40 m-2 p-2'
+              id='phone'
+              @value='{{this.formData.phone}}'
+              placeholder='Phone:'
+            />
+            <Input
+              class='bg-black/40 m-2 p-2'
+              id='email'
+              @value='{{this.formData.email}}'
+              placeholder='Email:'
+            />
+          </div>
+          <div class='flex flex-col h-full w-1/2 text-sm'>
+            <Textarea
+              class='bg-black/40 m-2 p-2 h-full'
+              id='message'
+              @value='{{this.formData.message}}'
+              placeholder='Message:'
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <button
+            class='border rounded-sm tracking-wider bg-kst-blue border-kst-blue mx-2 mt-6 py-2 px-4 text-sm uppercase text-white text-left'
+            type='submit'
+          >Send</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
