@@ -10,5 +10,7 @@ export default class ContactSectionContactFormComponent extends Component {
   };
 
   @action
-  submit() {}
+  submit() {
+    console.log(this.formData);
+  }
 }
