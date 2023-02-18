@@ -1,15 +1,15 @@
 <div
-  class='w-full flex flex-row pl-8 md:pl-0 text-white xs:text-2xs text-xs md:py-2'
+  class="w-full flex flex-row pl-8 md:pl-0 text-white xs:text-2xs text-xs md:py-2"
 >
   {{#if @item.iconPath}}
     <img
-      class='w-4 h-4 mt-1'
+      class="w-4 h-4 mt-1"
       src={{@item.iconPath}}
-      alt='small icon representing {{@item.name}}'
+      alt="small icon representing {{@item.name}}"
     />
   {{/if}}
   <div
-    class='{{if @item.iconPath "pl-2" "pl-6"}}
-      self-center tracking-wider leading-6'
+    class="{{if @item.iconPath 'pl-2' 'pl-6'}}
+      self-center tracking-wider leading-6"
   >{{{@item.value}}}</div>
 </div>
