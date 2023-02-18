@@ -1,10 +1,10 @@
-<div class='col-span-3 bg-white/30 mx-10'>
+<div class='col-span-3 bg-white/30 md:mx-10 mt-8 md:mt-0'>
   <div class='flex flex-col py-4 px-8 h-full'>
     <h3 class='text-kst-blue text-xl tracking-wider pb-2'>Get in touch</h3>
     <div class='flex flex-col h-full w-full'>
       <form class='flex flex-col py-2 h-full'>
-        <div class='flex flex-row w-full'>
-          <div class='flex flex-col h-full w-1/2 text-sm'>
+        <div class='flex flex-col md:flex-row w-full'>
+          <div class='flex flex-col h-full w-full md:w-1/2 text-sm'>
             <Input
               class='bg-black/40 m-2 p-2'
               id='name'
@@ -25,7 +25,7 @@
               placeholder='Email:'
             />
           </div>
-          <div class='flex flex-col h-full w-1/2 text-sm'>
+          <div class='flex flex-col h-full w-full md:w-1/2 text-sm'>
             <Textarea
               class='bg-black/40 m-2 p-2 h-full'
               id='message'
@@ -35,9 +35,9 @@
             />
           </div>
         </div>
-        <div>
+        <div class='flex flex-row items-center justify-center lg:justify-start'>
           <button
-            class='border rounded-sm tracking-wider bg-kst-blue border-kst-blue mx-2 mt-6 py-2 px-4 text-sm uppercase text-white text-left'
+            class='border rounded-sm tracking-wider bg-kst-blue border-kst-blue mx-2 mt-6 py-2 px-8 lg:px-4 text-sm uppercase text-white text-left'
             type='submit'
           >Send</button>
         </div>

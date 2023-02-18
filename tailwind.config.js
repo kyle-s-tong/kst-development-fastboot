@@ -14,6 +14,10 @@ module.exports = {
       colors: {
         'kst-blue': '#AAD6E6',
       },
+      fontSize: {
+        '2xs': '0.5rem',
+        '3xs': '0.375rem',
+      },
     },
   },
   plugins: [],
