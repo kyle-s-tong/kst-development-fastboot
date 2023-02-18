@@ -3,27 +3,24 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module(
-  'Integration | Component | contact-section/address-box-row',
-  function (hooks) {
-    setupRenderingTest(hooks);
+module('Integration | Component | contact-section/address-box-row', function (hooks) {
+  setupRenderingTest(hooks);
 
-    test('it renders', async function (assert) {
-      // Set any properties with this.set('myProperty', 'value');
-      // Handle any actions with this.set('myAction', function(val) { ... });
+  test('it renders', async function (assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.set('myAction', function(val) { ... });
 
-      await render(hbs`<ContactSection::AddressBoxRow />`);
+    await render(hbs`<ContactSection::AddressBoxRow />`);
 
-      assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), '');
 
-      // Template block usage:
-      await render(hbs`
-      <ContactSection::AddressBoxRow>
-        template block text
-      </ContactSection::AddressBoxRow>
-    `);
+    // Template block usage:
+    await render(hbs`
+    <ContactSection::AddressBoxRow>
+      template block text
+    </ContactSection::AddressBoxRow>
+  `);
 
-      assert.equal(this.element.textContent.trim(), 'template block text');
-    });
-  }
-);
+    assert.equal(this.element.textContent.trim(), 'template block text');
+  });
+});
