@@ -1,3 +1,9 @@
+{{#if this.showModal}}
+  <WorkSection::PortfolioModal
+    @images={{this.modalImages}}
+    @closeModal={{this.closeModal}}
+  />
+{{/if}}
 <section
   id="work-section"
   class="bg-white flex flex-col justify-center items-center pb-12"
@@ -18,5 +24,5 @@
     We believe our work speaks for itself. Browse some of our projects
     <span class="text-kst-blue">below</span>.
   </div>
-  <WorkSection::PortfolioGrid />
+  <WorkSection::PortfolioGrid @openModal={{this.openModal}} />
 </section>
