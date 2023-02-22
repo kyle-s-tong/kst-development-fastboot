@@ -21,7 +21,6 @@ module.exports = {
   env: {
     browser: true,
   },
-  rules: {},
   overrides: [
     // node files
     {
@@ -38,6 +37,9 @@ module.exports = {
       ],
       parserOptions: {
         sourceType: 'script',
+      },
+      rules: {
+        'node/no-unpublished-require': 'off',
       },
       env: {
         browser: false,
