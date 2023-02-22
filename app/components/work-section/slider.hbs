@@ -1,5 +1,9 @@
-<div class="flex h-3/4 flex-row">
-  {{#each @images as |image|}}
-    <img src={{image}} />
+<div class="flex h-full w-full flex-row">
+  {{#each @images as |image index|}}
+    <img
+      class="h-full w-full
+        {{if (eq this.selectedImageIndex index) 'flex' 'hidden'}}"
+      src={{image}}
+    />
   {{/each}}
 </div>
