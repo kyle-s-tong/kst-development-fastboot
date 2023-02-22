@@ -1,7 +1,7 @@
-<div class="py-8 px-2 sm:px-20 grid grid-cols-4">
-  <div class="flex col-span-1 px-2 xl:ml-4 2xl:ml-8">
+<div class="grid grid-cols-4 py-8 px-2 sm:px-20">
+  <div class="col-span-1 flex px-2 xl:ml-4 2xl:ml-8">
     <figure
-      class="flex items-center justify-center bg-kst-blue border rounded-full h-16 w-16 xl:ml-4 2xl:ml-0"
+      class="flex h-16 w-16 items-center justify-center rounded-full border bg-kst-blue xl:ml-4 2xl:ml-0"
     >
       <img
         src={{@service.imagePath}}
@@ -10,11 +10,11 @@
       />
     </figure>
   </div>
-  <div class="lg:pl-2 col-span-3">
-    <div class="pb-1 lg:pb-4 text-md lg:text-xl tracking-wide">
+  <div class="col-span-3 lg:pl-2">
+    <div class="text-md pb-1 tracking-wide lg:pb-4 lg:text-xl">
       {{@service.title}}
     </div>
-    <div class="text-sm lg:text-md text-slate-400">
+    <div class="lg:text-md text-sm text-slate-400">
       {{@service.description}}
     </div>
   </div>

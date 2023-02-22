@@ -1,12 +1,12 @@
-<div class="col-span-3 bg-white/30 md:mx-10 mt-8 md:mt-0">
-  <div class="flex flex-col py-4 px-8 h-full">
-    <h3 class="text-kst-blue text-xl tracking-wider pb-2">Get in touch</h3>
-    <div class="flex flex-col h-full w-full">
-      <form class="flex flex-col py-2 h-full">
-        <div class="flex flex-col md:flex-row w-full">
-          <div class="flex flex-col h-full w-full md:w-1/2 text-sm">
+<div class="col-span-3 mt-8 bg-white/30 md:mx-10 md:mt-0">
+  <div class="flex h-full flex-col py-4 px-8">
+    <h3 class="pb-2 text-xl tracking-wider text-kst-blue">Get in touch</h3>
+    <div class="flex h-full w-full flex-col">
+      <form class="flex h-full flex-col py-2">
+        <div class="flex w-full flex-col md:flex-row">
+          <div class="flex h-full w-full flex-col text-sm md:w-1/2">
             <Input
-              class="bg-black/40 text-white m-2 p-2"
+              class="m-2 bg-black/40 p-2 text-white"
               id="name"
               @type="text"
               @value={{mut (get this.formData "name")}}
@@ -14,23 +14,23 @@
               required
             />
             <Input
-              class="bg-black/40 text-white m-2 p-2"
+              class="m-2 bg-black/40 p-2 text-white"
               id="phone"
               @type="text"
               @value={{mut (get this.formData "phone")}}
               placeholder="Phone:"
             />
             <Input
-              class="bg-black/40 text-white m-2 p-2"
+              class="m-2 bg-black/40 p-2 text-white"
               id="email"
               @type="text"
               @value={{mut (get this.formData "email")}}
               placeholder="Email:"
             />
           </div>
-          <div class="flex flex-col h-full w-full md:w-1/2 text-sm">
+          <div class="flex h-full w-full flex-col text-sm md:w-1/2">
             <Textarea
-              class="bg-black/40 text-white m-2 p-2 h-full"
+              class="m-2 h-full bg-black/40 p-2 text-white"
               id="message"
               @type="text"
               @value={{mut (get this.formData "message")}}
@@ -41,7 +41,7 @@
         </div>
         <div class="flex flex-row items-center justify-center lg:justify-start">
           <button
-            class="border rounded-sm tracking-wider bg-kst-blue border-kst-blue mx-2 mt-6 py-2 px-8 lg:px-4 text-sm uppercase text-white text-left"
+            class="mx-2 mt-6 rounded-sm border border-kst-blue bg-kst-blue py-2 px-8 text-left text-sm uppercase tracking-wider text-white lg:px-4"
             type="submit"
             {{on "click" this.submit}}
           >Send</button>

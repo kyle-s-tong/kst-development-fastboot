@@ -1,12 +1,12 @@
 <section
   id="brand-section"
-  class="bg-kst-blue flex flex-row justify-center items-center"
+  class="flex flex-row items-center justify-center bg-kst-blue"
 >
   <div
-    class="w-full md:w-3/4 lg:w-1/2 flex flex-row justify-center items-center py-12"
+    class="flex w-full flex-row items-center justify-center py-12 md:w-3/4 lg:w-1/2"
   >
     {{#each this.brandData as |brand|}}
-      <a href="{{brand.brandUrl}}" class="w-1/2 md:w-1/4 lg:w-3/12 px-6">
+      <a href="{{brand.brandUrl}}" class="w-1/2 px-6 md:w-1/4 lg:w-3/12">
         <img
           src="{{brand.brandImagePath}}"
           alt="Logo for {{brand.brandName}}"
