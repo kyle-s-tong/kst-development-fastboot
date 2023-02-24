@@ -1,4 +1,4 @@
-<div class="flex h-full w-full flex-row">
+<div class="flex h-full w-full flex-row items-center">
   <div
     class="{{if
         this.hasMoreThanOneImage
@@ -12,7 +12,7 @@
   </div>
   {{#each @images as |image index|}}
     <img
-      class="h-full object-contain
+      class="h-4/5 object-contain sm:h-full
         {{if this.hasMoreThanOneImage 'w-10/12' 'w-full'}}
         {{if (eq this.selectedImageIndex index) 'flex' 'hidden'}}"
       src={{image}}
