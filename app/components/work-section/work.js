@@ -3,11 +3,8 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
 export default class WorkSectionWorkComponent extends Component {
-  @tracked showModal = true;
-  @tracked modalImages = [
-    'assets/img/portfolio/large/p1.webp',
-    'assets/img/portfolio/large/p2.webp',
-  ];
+  @tracked showModal = false;
+  @tracked modalImages = [];
 
   @action
   openModal(images) {

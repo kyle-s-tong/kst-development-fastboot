@@ -1,9 +1,32 @@
 <div class="flex h-full w-full flex-row">
+  <div
+    class="{{if
+        this.hasMoreThanOneImage
+        'flex h-full w-1/12 flex-col items-center justify-center'
+        'hidden'
+      }}"
+  >
+    <button {{on "click" this.slideToPrevious}} type="button" class="h-12 w-12">
+      <img src="assets/svg/arrow-left.svg" alt="Go to previous image" />
+    </button>
+  </div>
   {{#each @images as |image index|}}
     <img
-      class="h-full w-full
+      class="h-full object-contain
+        {{if this.hasMoreThanOneImage 'w-10/12' 'w-full'}}
         {{if (eq this.selectedImageIndex index) 'flex' 'hidden'}}"
       src={{image}}
     />
   {{/each}}
+  <div
+    class="{{if
+        this.hasMoreThanOneImage
+        'flex h-full w-1/12 flex-col items-center justify-center'
+        'hidden'
+      }}"
+  >
+    <button {{on "click" this.slideToNext}} type="button" class="h-12 w-12">
+      <img src="assets/svg/arrow-right.svg" alt="Go to next image" />
+    </button>
+  </div>
 </div>

@@ -13,11 +13,24 @@ export default class WorkSectionSliderComponent extends Component {
     this.selectedImageIndex += 1;
   }
 
+  @action
+  slideToPrevious() {
+    if (this.selectedImageIndex === 0) {
+      return;
+    }
+
+    this.selectedImageIndex -= 1;
+  }
+
   get activeImage() {
-    return this.args.images[this.selectedImageIndex];
+    return this.args.images?.[this.selectedImageIndex];
   }
 
   get maximumImageIndex() {
-    return this.args.images.count();
+    return this.args.images?.length - 1;
+  }
+
+  get hasMoreThanOneImage() {
+    return this.args.images?.length > 1;
   }
 }
