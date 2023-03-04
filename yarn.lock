@@ -2423,7 +2423,7 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
-basic-auth@~2.0.1:
+basic-auth@^2.0.1, basic-auth@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-2.0.1.tgz#b998279bf47ce38344b4f3cf916d4679bbf51e3a"
   integrity sha512-NF+epuEdnUYVlGuhaxbbq+dvJttwLnGY+YixlXlME5KpQ5W3CnXA5cVTneY3SPbPDRkcjMbifrwmFYcClgOZeg==
@@ -5226,7 +5226,7 @@ expand-tilde@^2.0.0, expand-tilde@^2.0.2:
   dependencies:
     homedir-polyfill "^1.0.1"
 
-express@^4.10.7, express@^4.18.1:
+express@^4.10.7, express@^4.17.2, express@^4.18.1:
   version "4.18.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.18.2.tgz#3fabe08296e930c796c19e3c516979386ba9fd59"
   integrity sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==
@@ -5357,6 +5357,18 @@ fast-sourcemap-concat@^2.1.0:
     source-map "^0.4.2"
     source-map-url "^0.3.0"
     sourcemap-validator "^1.1.0"
+
+fastboot-app-server@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/fastboot-app-server/-/fastboot-app-server-4.1.0.tgz#bc80680be727ee5f06597609955ec2c08fd6594d"
+  integrity sha512-LNwV0DuomU6jmPrFK9RbXOhnxjrCR8mHONz32kfg1O2Z53aOXiXEEqDsbeTWpGib2uXCsR5hFHl9X0GarZQEhA==
+  dependencies:
+    basic-auth "^2.0.1"
+    chalk "^4.1.2"
+    compression "^1.7.4"
+    express "^4.17.2"
+    fastboot "4.1.0"
+    fastboot-express-middleware "4.1.0"
 
 fastboot-express-middleware@4.1.0:
   version "4.1.0"
