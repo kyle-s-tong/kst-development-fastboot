@@ -1,10 +1,13 @@
 import Component from '@glimmer/component';
+import { htmlSafe } from '@ember/template';
 
 export default class ContactSectionAddressBoxComponent extends Component {
   addressBoxData = [
     {
       name: 'address1',
-      value: `Room 206, 230 Simin-daero, Dongan-gu <br>Anyang-si, Gyeonggi-do <br>South Korea`,
+      value: htmlSafe(
+        `Room 206, 230 Simin-daero, Dongan-gu <br>Anyang-si, Gyeonggi-do <br>South Korea`
+      ),
       iconPath: 'assets/svg/house.svg',
     },
     {
