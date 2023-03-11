@@ -7,7 +7,7 @@
       }}"
   >
     <button {{on "click" this.slideToPrevious}} type="button" class="h-12 w-12">
-      <img src="assets/svg/arrow-left.svg" alt="Go to previous image" />
+      <img src="assets/svg/arrow-left.svg" alt="Previous button" />
     </button>
   </div>
   {{#each @images as |image index|}}
@@ -16,6 +16,7 @@
         {{if this.hasMoreThanOneImage 'w-10/12' 'w-full'}}
         {{if (eq this.selectedImageIndex index) 'flex' 'hidden'}}"
       src={{image}}
+      alt="Project"
     />
   {{/each}}
   <div
@@ -26,7 +27,7 @@
       }}"
   >
     <button {{on "click" this.slideToNext}} type="button" class="h-12 w-12">
-      <img src="assets/svg/arrow-right.svg" alt="Go to next image" />
+      <img src="assets/svg/arrow-right.svg" alt="Next button" />
     </button>
   </div>
 </div>
