@@ -9,7 +9,6 @@
   "dependencies": {
     "ember-fetch": "^8.1.2",
     "fastboot-app-server": "^4.1.0",
-    "newrelic": "^8.11.1",
     "node-fetch": "^2.6.1",
     "@ember/string": "^3.0.1",
     "autoprefixer": "^10.4.13",
