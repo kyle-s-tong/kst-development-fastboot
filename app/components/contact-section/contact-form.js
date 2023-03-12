@@ -8,7 +8,7 @@ export default class ContactSectionContactFormComponent extends Component {
 
   @tracked enquiry;
 
-  @tracked submitIsDisabled = false;
+  @tracked submitIsDisabled = true;
 
   formData = {
     name: '',
@@ -16,6 +16,16 @@ export default class ContactSectionContactFormComponent extends Component {
     email: '',
     message: '',
   };
+
+  get buttonClass() {
+    const baseClasses =
+      'mx-2 mt-6 rounded-sm border py-2 px-8 text-left text-sm uppercase tracking-wider';
+    if (this.submitIsDisabled) {
+      return `${baseClasses} border-gray-300 bg-gray-300 text-gray-400`;
+    }
+
+    return `${baseClasses} border-kst-blue bg-kst-blue text-white lg:px-4`;
+  }
 
   @action
   async submit(e) {

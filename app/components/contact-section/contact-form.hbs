@@ -40,7 +40,7 @@
         </div>
         <div class="flex flex-row items-center justify-center lg:justify-start">
           <button
-            class="mx-2 mt-6 rounded-sm border border-kst-blue bg-kst-blue py-2 px-8 text-left text-sm uppercase tracking-wider text-white lg:px-4"
+            class={{this.buttonClass}}
             type="submit"
             {{on "click" this.submit}}
           >Send</button>
