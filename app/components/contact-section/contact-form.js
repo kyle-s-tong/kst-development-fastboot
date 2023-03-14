@@ -3,56 +3,80 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { inject as service } from '@ember/service';
 
+const REQUIRED_KEYS = ['email', 'message'];
+
 export default class ContactSectionContactFormComponent extends Component {
   @service store;
 
-  @tracked enquiry;
+  @tracked formData = new FormData();
 
   @tracked submitIsDisabled = true;
 
-  formData = {
-    name: '',
-    phone: '',
-    email: '',
-    message: '',
-  };
+  @tracked isSendingEnquiry = false;
 
   get buttonClass() {
     const baseClasses =
-      'mx-2 mt-6 rounded-sm border py-2 px-8 text-left text-sm uppercase tracking-wider';
+      'mx-2 mt-6 rounded-sm py-2 px-8 lg:px-4 text-left text-sm uppercase tracking-wider';
     if (this.submitIsDisabled) {
-      return `${baseClasses} border-gray-300 bg-gray-300 text-gray-400`;
+      return `${baseClasses} bg-gray-300/50 text-gray-500`;
     }
 
-    return `${baseClasses} border-kst-blue bg-kst-blue text-white lg:px-4`;
+    return `${baseClasses} bg-kst-blue hover:bg-sky-400 text-white`;
+  }
+
+  get hasRequiredKeysForEnquiry() {
+    const currentKeys = [];
+    for (const [key, value] of this.formData) {
+      const trimmedValue = value.trim();
+      if (trimmedValue) {
+        currentKeys.push(key);
+      }
+    }
+
+    return REQUIRED_KEYS.every((key) => currentKeys.includes(key));
+  }
+
+  @action
+  formChanged(event) {
+    const rawForm = event.currentTarget;
+    this.formData = new FormData(rawForm);
+
+    if (this.hasRequiredKeysForEnquiry) {
+      this.submitIsDisabled = false;
+      return;
+    }
+
+    this.submitIsDisabled = true;
   }
 
   @action
   async submit(e) {
     e.preventDefault();
-    this.disableSubmit();
-    console.log(this.formData);
-
-    this.enquiry = this.store.createRecord('enquiry', { ...this.formData });
-
-    try {
-      await this.enquiry.save();
-    } catch (err) {
-      console.log(err);
+    if (!this.hasRequiredKeysForEnquiry) {
+      return;
     }
 
-    this.enableSubmit();
+    const enquiry = this.store.createRecord(
+      'enquiry',
+      this.mapFormData(this.formData)
+    );
+
+    this.isSendingEnquiry = true;
+    try {
+      await enquiry.save();
+    } catch (err) {
+      console.log(err);
+    } finally {
+      this.isSendingEnquiry = false;
+    }
   }
 
-  disableSubmit() {
-    this.submitIsDisabled = true;
+  mapFormData(formData) {
+    const mappedData = {};
+    for (const [key, value] of formData) {
+      mappedData[key] = value;
+    }
 
-    return this;
-  }
-
-  enableSubmit() {
-    this.submitIsDisabled = false;
-
-    return this;
+    return mappedData;
   }
 }

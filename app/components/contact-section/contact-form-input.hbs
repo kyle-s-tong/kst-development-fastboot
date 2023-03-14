@@ -1,0 +1,16 @@
+{{#if @isTextArea}}
+  <textarea
+    class="m-2 h-full bg-black/40 p-2 text-white"
+    id={{@elementName}}
+    name={{@elementName}}
+    ...attributes
+  ></textarea>
+{{else}}
+  <input
+    class="m-2 bg-black/40 p-2 text-white"
+    type="text"
+    id={{@elementName}}
+    name={{@elementName}}
+    ...attributes
+  />
+{{/if}}

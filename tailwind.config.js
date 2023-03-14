@@ -1,7 +1,10 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
-// eslint-disable-next-line no-undef
+
+const colors = require('tailwindcss/colors');
+
 module.exports = {
-  content: ['./app/**/*.hbs'],
+  content: ['./app/**/*.{hbs,html,js}'],
   theme: {
     extend: {
       backgroundImage: {
@@ -13,6 +16,8 @@ module.exports = {
       },
       colors: {
         'kst-blue': '#AAD6E6',
+        gray: colors.gray,
+        red: colors.red,
       },
       fontSize: {
         '2xs': '0.5rem',
