@@ -5,26 +5,18 @@
       <form class="flex h-full flex-col py-2" {{on "change" this.formChanged}}>
         <div class="flex w-full flex-col md:flex-row">
           <div class="flex h-full w-full flex-col text-sm md:w-1/2">
-            <ContactSection::ContactFormInput
-              @elementName="name"
-              placeholder="Name:"
-            />
-            <ContactSection::ContactFormInput
-              @elementName="phone"
-              placeholder="Phone:"
-            />
+            <ContactSection::ContactFormInput @elementName="name" />
+            <ContactSection::ContactFormInput @elementName="phone" />
             <ContactSection::ContactFormInput
               @elementName="email"
-              placeholder="Email:"
-              required
+              @isRequiredField={{true}}
             />
           </div>
           <div class="flex h-full w-full flex-col text-sm md:w-1/2">
             <ContactSection::ContactFormInput
               @elementName="message"
               @isTextArea={{true}}
-              placeholder="Message:"
-              required
+              @isRequiredField={{true}}
             />
           </div>
         </div>

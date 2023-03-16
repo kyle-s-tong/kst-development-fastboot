@@ -3,6 +3,7 @@
     class="m-2 h-full bg-black/40 p-2 text-white"
     id={{@elementName}}
     name={{@elementName}}
+    placeholder={{this.placeholder}}
     ...attributes
   ></textarea>
 {{else}}
@@ -11,6 +12,7 @@
     type="text"
     id={{@elementName}}
     name={{@elementName}}
+    placeholder={{this.placeholder}}
     ...attributes
   />
 {{/if}}
