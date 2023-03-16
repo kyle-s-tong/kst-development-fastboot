@@ -46,10 +46,17 @@
                     fill="currentFill"
                   ></path>
                 </svg>
-                <span class="sr-only">Loading...</span>
+                <span
+                  class="ml-2 mt-0.5 font-medium uppercase text-white"
+                >Sending...</span>
               </div>
             {{/unless}}
           </button>
+          {{#if this.enquiryHasBeenSent}}
+            <div
+              class="leading-wide mx-2 mt-6 rounded-md bg-black/40 py-1 px-2 text-kst-blue"
+            >Enquiry sent successfully. We will be in touch!</div>
+          {{/if}}
         </div>
       </form>
     </div>

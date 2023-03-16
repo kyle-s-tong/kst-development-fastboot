@@ -14,6 +14,8 @@ export default class ContactSectionContactFormComponent extends Component {
 
   @tracked isSendingEnquiry = false;
 
+  @tracked enquiryHasBeenSent = false;
+
   get buttonClass() {
     const baseClasses =
       'mx-2 mt-6 rounded-sm py-2 px-8 lg:px-4 text-left text-sm uppercase tracking-wider';
@@ -21,7 +23,7 @@ export default class ContactSectionContactFormComponent extends Component {
       return `${baseClasses} bg-gray-300/50 text-gray-500`;
     }
 
-    return `${baseClasses} bg-kst-blue hover:bg-sky-400 text-white`;
+    return `${baseClasses} bg-kst-blue hover:bg-sky-300 text-white`;
   }
 
   get hasRequiredKeysForEnquiry() {
@@ -38,6 +40,7 @@ export default class ContactSectionContactFormComponent extends Component {
 
   @action
   formChanged(event) {
+    this.enquiryHasBeenSent = false;
     const rawForm = event.currentTarget;
     this.formData = new FormData(rawForm);
 
@@ -68,6 +71,7 @@ export default class ContactSectionContactFormComponent extends Component {
       console.log(err);
     } finally {
       this.isSendingEnquiry = false;
+      this.enquiryHasBeenSent = true;
     }
   }
 
