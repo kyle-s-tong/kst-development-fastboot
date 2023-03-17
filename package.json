@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "rm -rf dist && ember build --environment=production",
+    "deploy": "yarn build && eb deploy --staged",
     "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
     "lint:fix": "concurrently \"npm:lint:*:fix\" --names \"fix:\"",
     "lint:hbs": "ember-template-lint .",
