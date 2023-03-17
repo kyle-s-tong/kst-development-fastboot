@@ -26,9 +26,7 @@
             type="submit"
             {{on "click" this.submit}}
           >
-            {{#unless this.isSendingEnquiry}}
-              Send
-            {{else}}
+            {{#if this.isSendingEnquiry}}
               <div role="status" class="flex flex-row justify-center">
                 <svg
                   aria-hidden="true"
@@ -50,7 +48,9 @@
                   class="ml-2 mt-0.5 font-medium uppercase text-white"
                 >Sending...</span>
               </div>
-            {{/unless}}
+            {{else}}
+              Send
+            {{/if}}
           </button>
           {{#if this.enquiryHasBeenSent}}
             <div
