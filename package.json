@@ -20,7 +20,7 @@
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "format": "prettier . --write",
-    "start": "ember serve",
+    "start": "ember serve --environment=development",
     "test": "concurrently \"npm:lint\" \"npm:test:*\" --names \"lint,test:\"",
     "test:ember": "ember test"
   },
