@@ -14,6 +14,17 @@ module.exports = function (environment) {
       },
     },
 
+    metricsAdapters: [
+      {
+        name: 'GoogleTagManager',
+        dataLayer: [],
+        config: {
+          id: 'GTM-N6R6MVM',
+          debug: environment === 'development',
+        },
+      },
+    ],
+
     APP: {
       emailHost: 'https://api.kstdevelopment.com',
       // Here you can pass flags/options to your application instance

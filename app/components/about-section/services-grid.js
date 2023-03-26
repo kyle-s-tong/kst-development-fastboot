@@ -12,7 +12,7 @@ export default class AboutSectionServicesGridComponent extends Component {
       title: 'Solutions Consultancy',
       imagePath: 'assets/img/consultancy.webp',
       description:
-        'Provide recommendations on technology and/or architecture base on your business needs.',
+        'Provide recommendations on technology and/or architecture based on your business needs.',
     },
     {
       title: 'Infrastructure Management',
