@@ -69,7 +69,7 @@
     "prettier-plugin-tailwindcss": "^0.2.3",
     "qunit": "^2.19.3",
     "qunit-dom": "^2.0.0",
-    "tracked-built-ins": "^3.1.0",
+    "tracked-built-ins": "^3.1.1",
     "webpack": "^5.75.0"
   },
   "engines": {
@@ -82,7 +82,8 @@
     "@ember/string": "^3.0.1",
     "autoprefixer": "^10.4.13",
     "fastboot-app-server": "^4.1.0",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "yup": "^1.0.2"
   },
   "fastbootDependencies": [
     "crypto"

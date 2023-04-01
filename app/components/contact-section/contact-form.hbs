@@ -1,15 +1,26 @@
-<div class="col-span-3 mt-8 bg-white/30 md:mx-10 md:mt-0">
+<div class="col-span-3 mt-8 rounded bg-gray-700 shadow-xl md:mx-10 md:mt-0">
   <div class="flex h-full flex-col py-4 px-8">
     <h3 class="pb-2 text-xl tracking-wider text-kst-blue">Get in touch</h3>
     <div class="flex h-full w-full flex-col">
       <form class="flex h-full flex-col py-2" {{on "change" this.formChanged}}>
         <div class="flex w-full flex-col md:flex-row">
           <div class="flex h-full w-full flex-col text-sm md:w-1/2">
-            <ContactSection::ContactFormInput @elementName="name" />
-            <ContactSection::ContactFormInput @elementName="phone" />
+            <ContactSection::ContactFormInput
+              @elementName="name"
+              @isRequiredField={{true}}
+              @errorMessage={{this.errorMessages.name}}
+              @clearErrorMessage={{this.clearErrorMessage}}
+            />
+            <ContactSection::ContactFormInput
+              @elementName="phone"
+              @errorMessage={{this.errorMessages.phone}}
+              @clearErrorMessage={{this.clearErrorMessage}}
+            />
             <ContactSection::ContactFormInput
               @elementName="email"
               @isRequiredField={{true}}
+              @errorMessage={{this.errorMessages.email}}
+              @clearErrorMessage={{this.clearErrorMessage}}
             />
           </div>
           <div class="flex h-full w-full flex-col text-sm md:w-1/2">
@@ -17,6 +28,8 @@
               @elementName="message"
               @isTextArea={{true}}
               @isRequiredField={{true}}
+              @errorMessage={{this.errorMessages.message}}
+              @clearErrorMessage={{this.clearErrorMessage}}
             />
           </div>
         </div>

@@ -1,18 +1,24 @@
+{{#if @errorMessage}}
+  <p class="ml-2 text-red-500">{{this.formattedErrorMessage}}</p>
+{{/if}}
 {{#if @isTextArea}}
   <textarea
-    class="m-2 h-full bg-black/40 p-2 text-white"
+    class="m-2 h-full bg-black/30 p-2 text-white"
     id={{@elementName}}
     name={{@elementName}}
     placeholder={{this.placeholder}}
+    {{on "change" (fn @clearErrorMessage @elementName)}}
     ...attributes
   ></textarea>
 {{else}}
   <input
-    class="m-2 bg-black/40 p-2 text-white"
+    class="m-2 bg-black/30 p-2 text-white
+      {{if @errorMessage 'border border-red-500'}}"
     type="text"
     id={{@elementName}}
     name={{@elementName}}
     placeholder={{this.placeholder}}
+    {{on "change" (fn @clearErrorMessage @elementName)}}
     ...attributes
   />
 {{/if}}

@@ -5,11 +5,23 @@ import Component from '@glimmer/component';
 export default class ContactSectionContactFormInputComponent extends Component {
   get placeholder() {
     const name = this.args.elementName;
-    const capitalisedName = name.charAt(0).toUpperCase() + name.slice(1);
+    const capitalisedName = this.capitalise(name);
 
     if (this.args.isRequiredField) {
       return `*${capitalisedName}:`;
     }
     return `${capitalisedName}:`;
+  }
+
+  get formattedErrorMessage() {
+    if (!this.args.errorMessage) {
+      return '';
+    }
+
+    return this.capitalise(this.args.errorMessage);
+  }
+
+  capitalise(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
 }

@@ -1,9 +1,10 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
-import { tracked } from '@glimmer/tracking';
+import { tracked } from 'tracked-built-ins';
 import { inject as service } from '@ember/service';
+import { object, string } from 'yup';
 
-const REQUIRED_KEYS = ['email', 'message'];
+const REQUIRED_KEYS = ['name', 'email', 'message'];
 
 export default class ContactSectionContactFormComponent extends Component {
   @service store;
@@ -16,11 +17,13 @@ export default class ContactSectionContactFormComponent extends Component {
 
   @tracked enquiryHasBeenSent = false;
 
+  errorMessages = tracked({});
+
   get buttonClass() {
     const baseClasses =
       'mx-2 mt-6 rounded-sm py-2 px-8 lg:px-4 text-left text-sm uppercase tracking-wider';
     if (this.submitIsDisabled) {
-      return `${baseClasses} bg-gray-300/50 text-gray-500`;
+      return `${baseClasses} bg-gray-300/30 text-gray-200`;
     }
 
     return `${baseClasses} bg-kst-blue hover:bg-sky-300 text-white`;
@@ -59,10 +62,14 @@ export default class ContactSectionContactFormComponent extends Component {
       return;
     }
 
-    const enquiry = this.store.createRecord(
-      'enquiry',
-      this.mapFormData(this.formData)
-    );
+    const mappedData = this.mapFormData(this.formData);
+
+    const validated = await this.validateForm(mappedData);
+    if (validated === false) {
+      return;
+    }
+
+    const enquiry = this.store.createRecord('enquiry', mappedData);
 
     this.isSendingEnquiry = true;
     try {
@@ -72,7 +79,16 @@ export default class ContactSectionContactFormComponent extends Component {
     } finally {
       this.isSendingEnquiry = false;
       this.enquiryHasBeenSent = true;
+      this.errorMessages = tracked({});
     }
+  }
+
+  @action clearErrorMessage(element) {
+    if (!this.errorMessages[element]) {
+      return;
+    }
+
+    this.errorMessages[element] = '';
   }
 
   mapFormData(formData) {
@@ -82,5 +98,25 @@ export default class ContactSectionContactFormComponent extends Component {
     }
 
     return mappedData;
+  }
+
+  async validateForm(data) {
+    const validationSchema = object({
+      name: string().required(),
+      phone: string().nullable(),
+      email: string().email().required(),
+      message: string().required(),
+    });
+
+    try {
+      await validationSchema.validate(data);
+    } catch (validationError) {
+      const { message, type } = validationError;
+      this.errorMessages[type] = message;
+
+      return false;
+    }
+
+    return true;
   }
 }
