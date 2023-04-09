@@ -1,3 +1,125 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.rotate1 {
+  animation: rotate1 0.7s linear forwards;
+}
+
+.rotate2 {
+  animation: rotate2 0.7s linear forwards;
+}
+
+.rotate3 {
+  animation: rotate3 0.7s linear forwards;
+}
+
+.rotate4 {
+  animation: rotate4 0.7s linear forwards;
+}
+
+.rotate5 {
+  animation: rotate5 0.7s linear forwards;
+}
+
+.rotate6 {
+  animation: rotate6 0.7s linear forwards;
+}
+
+.rotate7 {
+  animation: rotate7 0.7s linear forwards;
+}
+
+.rotate8 {
+  animation: rotate8 0.7s linear forwards;
+}
+
+.fadeIn {
+  animation: fadeIn 0.8s linear forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate1 {
+  from {
+    transform: rotate(0deg);
+    transform-origin: 45px 45px;
+  }
+  to {
+    transform: rotate(45deg);
+    transform-origin: 45px 45px;
+  }
+}
+
+@keyframes rotate2 {
+  from {
+    transform: rotate(0deg);
+    transform-origin: 45px 45px;
+  }
+  to {
+    transform: rotate(90deg);
+    transform-origin: 45px 45px;
+  }
+}
+
+@keyframes rotate3 {
+  from {
+    transform: rotate(0deg);
+    transform-origin: 45px 45px;
+  }
+  to {
+    transform: rotate(135deg);
+    transform-origin: 45px 45px;
+  }
+}
+
+@keyframes rotate4 {
+  from {
+    transform: rotate(0deg);
+    transform-origin: 45px 45px;
+  }
+  to {
+    transform: rotate(180deg);
+    transform-origin: 45px 45px;
+  }
+}
+
+@keyframes rotate5 {
+  from {
+    transform: rotate(0deg);
+    transform-origin: 45px 45px;
+  }
+  to {
+    transform: rotate(225deg);
+    transform-origin: 45px 45px;
+  }
+}
+
+@keyframes rotate6 {
+  from {
+    transform: rotate(0deg);
+    transform-origin: 45px 45px;
+  }
+  to {
+    transform: rotate(270deg);
+    transform-origin: 45px 45px;
+  }
+}
+
+@keyframes rotate7 {
+  from {
+    transform: rotate(0deg);
+    transform-origin: 45px 45px;
+  }
+  to {
+    transform: rotate(315deg);
+    transform-origin: 45px 45px;
+  }
+}

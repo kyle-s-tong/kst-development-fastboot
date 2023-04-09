@@ -1,22 +1,14 @@
 <section id="hero-section" class="flex h-screen w-screen justify-center">
   <div class="mb-24 flex flex-col items-center justify-center md:mb-0">
-    <img
-      class="mb-8 flex h-[4.85rem] w-96"
-      src="assets/svg/logo.svg"
-      alt="KST Development"
-    />
-    {{!-- <div class="mb-8 flex h-[4.85rem] w-96">
-
-
-    </div> --}}
+    <SvgLogo class="mb-8 flex h-[4.85rem] w-96" />
     <div
-      class="my-4 text-3xs uppercase text-white sm:text-2xs sm:tracking-wider md:text-xs"
+      class="fadeIn my-4 text-3xs uppercase text-white sm:text-2xs sm:tracking-wider md:text-xs"
     >
       WEB DEVELOPMENT - WEB CONSULTING - INFRASTRUCTURE MANAGEMENT
     </div>
     <HeroSection::Title />
     <div
-      class="flex w-full flex-row justify-center gap-1 lg:w-1/2 lg:justify-between"
+      class="fadeIn flex w-full flex-row justify-center gap-1 lg:w-1/2 lg:justify-between"
     >
       <HeroSection::Button @text="What we do" @link="#about-section" />
       <HeroSection::Button @text="Contact Us" @link="#contact-section" />
