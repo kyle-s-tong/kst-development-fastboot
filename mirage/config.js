@@ -23,4 +23,5 @@ export default function () {
   this.get('/article', (schema) => {
     return schema.articles.all();
   });
+  this.get('/article/:id');
 }
