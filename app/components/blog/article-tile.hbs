@@ -1,10 +1,15 @@
-<div class="rounded-md bg-white/80 p-5">
-  <div>
+<div class="rounded-md bg-white/80 p-4">
+  <div class="text-2xl pb-4 hover:text-gray-600">
     <LinkTo @route="blog.article" @model={{@article}}>
       {{@article.title}}
     </LinkTo>
   </div>
-  <div>
-
+  <div class="flex flex-col text-sm">
+    {{excerpt @article.body}}...
+    <div class="flex justify-end pt-2">
+      <LinkTo class="hover:text-gray-600 mr-6 uppercase" @route="blog.article" @model={{@article}}>
+        Read more &#8594;
+      </LinkTo>
+    </div>
   </div>
 </div>

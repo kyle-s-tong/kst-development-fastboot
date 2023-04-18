@@ -16,6 +16,7 @@ module.exports = {
       },
       colors: {
         'kst-blue': '#AAD6E6',
+        'kst-gray': '#374151',
         gray: colors.gray,
         red: colors.red,
       },
