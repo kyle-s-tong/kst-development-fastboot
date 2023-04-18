@@ -1,5 +1,5 @@
 <div class="rounded-md bg-white/80 p-4">
-  <div class="text-2xl pb-4 hover:text-gray-600">
+  <div class="pb-4 text-2xl hover:text-gray-600">
     <LinkTo @route="blog.article" @model={{@article}}>
       {{@article.title}}
     </LinkTo>
@@ -7,7 +7,11 @@
   <div class="flex flex-col text-sm">
     {{excerpt @article.body}}...
     <div class="flex justify-end pt-2">
-      <LinkTo class="hover:text-gray-600 mr-6 uppercase" @route="blog.article" @model={{@article}}>
+      <LinkTo
+        class="mr-6 uppercase hover:text-gray-600"
+        @route="blog.article"
+        @model={{@article}}
+      >
         Read more &#8594;
       </LinkTo>
     </div>
