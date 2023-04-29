@@ -25,6 +25,14 @@ module.exports = function (environment) {
       },
     ],
 
+    fastboot: {
+      hostWhitelist: [
+        'kstdevelopment.com',
+        'api.kstdevelopment.com',
+        /^localhost:\d+$/,
+      ],
+    },
+
     APP: {
       emailHost: 'https://api.kstdevelopment.com',
       // Here you can pass flags/options to your application instance
