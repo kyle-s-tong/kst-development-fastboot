@@ -1,7 +1,10 @@
-<div class="rounded-md bg-white/80 drop-shadow-xl p-4">
+<div class="rounded-md bg-white/80 p-4 drop-shadow-xl">
   <div class="flex">
     {{#if @article.image}}
-      <img class="h-12 w-12" src="http://localhost:8080{{@article.image.uri.url}}">
+      <img
+        class="h-12 w-12"
+        src="http://localhost:8080{{@article.image.uri.url}}"
+      />
     {{/if}}
   </div>
   <div class="pb-4 text-2xl hover:text-gray-600">
