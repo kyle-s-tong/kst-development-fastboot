@@ -24,4 +24,14 @@ export default function () {
     return schema.articles.all();
   });
   this.get('/article/:id');
+
+  this.get('/article/:id/field_image', (schema, request) => {
+    const articleId = request.params.id;
+
+    return schema.images.findBy({ articleId });
+  });
+
+  this.get('/field-image', (schema) => {
+    return schema.images;
+  });
 }

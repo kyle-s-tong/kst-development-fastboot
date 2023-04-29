@@ -7,7 +7,9 @@ export default Factory.extend({
   },
 
   body() {
-    return faker.lorem.paragraphs(3, '<br/>\n');
+    return {
+      processed: faker.lorem.paragraphs(3, '<br/>\n'),
+    };
   },
 
   created() {

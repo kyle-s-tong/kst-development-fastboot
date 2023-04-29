@@ -1,9 +1,9 @@
-<div class="rounded-md bg-white/80 p-4 drop-shadow-xl">
-  <div class="flex">
+<div class="flex flex-col rounded-sm bg-white/80 p-4 drop-shadow-xl">
+  <div class="flex pb-4">
     {{#if @article.image}}
       <img
-        class="h-12 w-12"
-        src="http://localhost:8080{{@article.image.uri.url}}"
+        class="w-full"
+        src="{{@article.image.uri.url}}"
       />
     {{/if}}
   </div>
@@ -13,8 +13,8 @@
     </LinkTo>
   </div>
   <div class="flex flex-col text-sm">
-    {{excerpt @article.body.processed}}...
-    <div class="flex justify-end pt-2">
+    {{excerpt @article.body.processed words=15}}...
+    <div class="flex self-end pt-2">
       <LinkTo
         class="mr-6 uppercase hover:text-gray-600"
         @route="blog.article"
