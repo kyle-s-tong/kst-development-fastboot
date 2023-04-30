@@ -1,5 +1,5 @@
 <div class="flex flex-col items-center pt-20 pb-32">
-  <div class="flex w-3/4 2xl:w-1/2 flex-col pb-20 pt-10 text-white lg:w-1/2">
+  <div class="flex w-3/4 flex-col pb-20 pt-10 text-white lg:w-1/2 2xl:w-1/2">
     <div class="flex flex-col items-center justify-center">
       <div class="flex h-5 w-3/4 bg-divider bg-repeat-x md:w-1/2"></div>
       <h2 class="pt-4 text-center text-xl uppercase md:text-3xl lg:text-5xl">OUR
@@ -11,7 +11,9 @@
         <span class="text-kst-blue">about</span>.</div>
     </div>
   </div>
-  <div class="grid w-10/12 lg:w-3/4 2xl:w-1/2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  <div
+    class="grid w-10/12 grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:w-3/4 2xl:w-1/2"
+  >
     {{#each @articles as |article|}}
       <Blog::ArticleTile @article={{article}} />
     {{/each}}
