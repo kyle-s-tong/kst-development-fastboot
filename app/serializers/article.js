@@ -10,11 +10,21 @@ export default class ArticleSerializer extends ApplicationSerializer {
     if (key === 'file--file') {
       return 'image';
     }
+
+    if (key === 'user--user') {
+      return 'user';
+    }
+
+    return key;
   }
 
   keyForRelationship(key) {
     if (key === 'image') {
       return 'field_image';
+    }
+
+    if (key === 'user') {
+      return 'uid';
     }
   }
 }

@@ -9,10 +9,13 @@
       <div class="w-1/2 py-32 text-6xl font-bold">
         {{@article.title}}
       </div>
+
+      {{@article.user.displayName}}
     </div>
   </div>
   <div class="blog-content w-1/2 pt-28 text-lg">
     {{html-safe @article.body.processed}}
+    {{this.contentWithAbsoluteImages}}
   </div>
 </div>
 <ContactSection />
