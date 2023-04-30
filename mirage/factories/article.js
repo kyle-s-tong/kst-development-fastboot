@@ -8,7 +8,7 @@ export default Factory.extend({
 
   body() {
     return {
-      processed: faker.lorem.paragraphs(3, '<br/>\n'),
+      processed: faker.lorem.paragraphs(15, '<br/>\n'),
     };
   },
 
