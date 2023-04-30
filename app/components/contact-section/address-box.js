@@ -8,22 +8,22 @@ export default class ContactSectionAddressBoxComponent extends Component {
       value: htmlSafe(
         `Room 206, 230 Simin-daero, Dongan-gu <br>Anyang-si, Gyeonggi-do <br>South Korea`
       ),
-      iconPath: 'assets/svg/house.svg',
+      iconPath: '/assets/svg/house.svg',
     },
     {
       name: 'phone',
       value: '(+82) 010-7170-7441',
-      iconPath: 'assets/svg/phone.svg',
+      iconPath: '/assets/svg/phone.svg',
     },
     {
       name: 'email',
       value: 'info@kstdevelopment.com',
-      iconPath: 'assets/svg/envelope.svg',
+      iconPath: '/assets/svg/envelope.svg',
     },
     {
       name: 'website',
       value: 'www.kstdevelopment.com',
-      iconPath: 'assets/svg/globe.svg',
+      iconPath: '/assets/svg/globe.svg',
     },
   ];
 }
