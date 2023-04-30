@@ -1,12 +1,17 @@
-<div class="flex flex-col items-center bg-black/60 pb-32 text-white">
-  <div class="flex h-full w-full bg-cover {{this.backgroundImageClass}}">
+<div
+  class="flex flex-col items-center bg-kst-gray/80 pb-32 tracking-wide text-white"
+>
+  <div
+    class="flex h-full w-full bg-cover bg-center bg-no-repeat"
+    style={{this.calculatedStyle}}
+  >
     <div class="flex h-full w-full justify-center bg-black/20">
       <div class="w-1/2 py-32 text-6xl font-bold">
         {{@article.title}}
       </div>
     </div>
   </div>
-  <div class="w-1/2 pt-28 text-lg leading-7">
+  <div class="blog-content w-1/2 pt-28 text-lg">
     {{html-safe @article.body.processed}}
   </div>
 </div>

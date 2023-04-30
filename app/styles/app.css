@@ -123,3 +123,7 @@
     transform-origin: 45px 45px;
   }
 }
+
+.blog-content h2 {
+  @apply pt-4 text-3xl font-semibold;
+}

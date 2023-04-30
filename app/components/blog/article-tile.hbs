@@ -6,7 +6,7 @@
         @route="blog.article"
         @model={{@article}}
       >
-        <img class="w-full" src="{{@article.image.uri.url}}" />
+        <img class="w-full" src="{{@article.image.formattedUrl}}" />
       </LinkTo>
     {{/if}}
   </div>
