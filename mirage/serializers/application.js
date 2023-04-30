@@ -2,7 +2,6 @@ import { JSONAPISerializer } from 'miragejs';
 
 export default JSONAPISerializer.extend({
   typeKeyForModel(model) {
-    console.log(model);
     if (model.modelName === 'article') {
       return 'node--article';
     }

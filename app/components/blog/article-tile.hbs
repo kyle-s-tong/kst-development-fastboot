@@ -1,19 +1,25 @@
 <div class="flex flex-col rounded-sm bg-white/80 p-4 drop-shadow-xl">
-  <div class="flex pb-4">
+  <div class="flex overflow-hidden flex mb-6 grow-0">
     {{#if @article.image}}
-      <img class="w-full" src="{{@article.image.uri.url}}" />
+      <LinkTo
+        class="w-full transition ease-in-out duration-200 uppercase hover:scale-110"
+        @route="blog.article"
+        @model={{@article}}
+      >
+        <img class="w-full" src="{{@article.image.uri.url}}" />
+      </LinkTo>
     {{/if}}
   </div>
-  <div class="pb-4 text-2xl hover:text-gray-600">
+  <div class="pb-4 grow-0 text-2xl font-semibold hover:text-gray-500">
     <LinkTo @route="blog.article" @model={{@article}}>
       {{@article.title}}
     </LinkTo>
   </div>
-  <div class="flex flex-col text-sm">
+  <div class="flex grow flex-col text-sm">
     {{excerpt @article.body.processed words=15}}...
-    <div class="flex self-end pt-2">
+    <div class="flex flex-col grow justify-end self-end pt-2">
       <LinkTo
-        class="mr-6 uppercase hover:text-gray-600"
+        class="mr-6 uppercase hover:text-gray-500"
         @route="blog.article"
         @model={{@article}}
       >

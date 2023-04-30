@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker';
 
 export default Factory.extend({
   title() {
-    return faker.lorem.lines(1);
+    return faker.lorem.words(8);
   },
 
   body() {
