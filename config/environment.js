@@ -42,7 +42,7 @@ module.exports = function (environment) {
 
   if (environment === 'development') {
     ENV['ember-cli-mirage'] = {
-      enabled: true,
+      enabled: false,
     };
 
     ENV.APP.cmsHost = 'http://localhost:8080';
