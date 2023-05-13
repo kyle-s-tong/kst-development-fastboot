@@ -5,12 +5,14 @@
     class="flex h-full w-full bg-cover bg-center bg-no-repeat"
     style={{this.calculatedStyle}}
   >
-    <div class="flex h-full w-full justify-center bg-black/50">
+    <div class="flex flex-col h-full w-full items-center justify-center bg-black/50">
       <div class="w-1/2 py-32 text-6xl font-bold">
         {{@article.title}}
       </div>
 
-      {{log @article.user}}
+      <div class="flex w-1/2 items-start justify-start">
+        Written by:<a href="mailto:{{@article.user.mail}}"> {{@article.user.name}}</a>
+      </div>
     </div>
   </div>
   <div class="blog-content w-1/2 pt-28 text-lg">

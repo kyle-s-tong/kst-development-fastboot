@@ -5,6 +5,8 @@ export default class BlogArticleRoute extends Route {
   @service store;
 
   model(params) {
-    return this.store.findRecord('article', params.article_id);
+    return this.store.findRecord('article', params.article_id, {
+      include: 'uid',
+    });
   }
 }

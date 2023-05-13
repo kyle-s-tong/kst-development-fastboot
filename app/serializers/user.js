@@ -1,7 +1,11 @@
 import ApplicationSerializer from './application';
 
 export default class UserSerializer extends ApplicationSerializer {
-  modelNameFromPayloadKey() {
-    return 'user';
+  modelNameFromPayloadKey(key) {
+    if (key === 'user--user') {
+      return 'user';
+    }
+
+    return key;
   }
 }
